@@ -1,11 +1,106 @@
-.image-style {
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
-    float: left;
-    margin-right: auto;
-  }
+/* General body styling */
+body {
+  background-image: url('red.png');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Noto Serif, sans-serif;
+}
 
-  .username {
-    font-weight: bold;
+/* Container for the rounded box */
+.container {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 60%;
+  min-width: 500px;
+  max-width: 800px;
+  aspect-ratio: calc(1.25);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styling */
+.header {
+    background-image: url('tomo.png'); /* Replace with the path to your image */
+    background-size: cover; /* Ensures the image covers the entire header area */
+    background-position: center; /* Centers the image */
+  background-color: #007BFF;
+  color: white;
+  height: 15vh;
+  padding: 25px;
+  text-align: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/* Sidebar and main content layout */
+.content {
+  display: flex;
+}
+
+/* Content area styling */
+.content {
+  display: flex;
+  flex: 1; /* Fills the remaining space in the container */
+}
+
+/* Sidebar styling */
+.sidebar {
+  background-color: #f8f9fa;
+  width: 20%;
+  padding: 15px;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.sidebar ul li a:hover {
+  background-color: #007BFF;
+  color: white;
+}
+
+/* Main content styling */
+.main-content {
+  padding: 20px;
+  width: 85%;
+}
+
+/* Flashing text styling */
+.flashing-text {
+  font-size: 1.2em;
+  color: rgb(199, 73, 73);
+  font-weight: bold;
+  text-align: justify;
+  animation: flash 3s infinite alternate;
+  margin-top: 10px; /* Adjust as needed */
+}
+
+/* Flashing animation */
+@keyframes flash {
+  0% {
+      opacity: 12;
   }
+  100% {
+      opacity: 0;
+  }
+}
